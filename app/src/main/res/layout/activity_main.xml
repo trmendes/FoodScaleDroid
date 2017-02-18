@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tmendes.com.analyticalbalancedroid.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataLayout"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:background="@android:color/holo_orange_light">
+
+
+        <TextView
+            android:text="@string/price_kg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTitleKgPrice"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:padding="5dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/number"
+            android:inputType="numberSigned|numberDecimal"
+            android:digits="0123456789.,"
+            android:ems="10"
+            android:id="@+id/editTextKgPrice"
+            android:background="@drawable/et_botton_line"
+            android:textAlignment="center"
+            android:padding="5dp" />
+
+        <TextView
+            android:text="@string/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTitleWeight"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="16sp"
+            android:padding="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned|numberDecimal"
+            android:hint="@string/number"
+            android:digits="0123456789.,"
+            android:background="@drawable/et_botton_line"
+            android:ems="10"
+            android:id="@+id/editTextWeight"
+            android:textAlignment="center"
+            android:padding="5dp" />
+
+        <TextView
+            android:text="@string/prod_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTitleProdName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="16sp"
+            android:padding="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/et_botton_line"
+            android:ems="10"
+            android:id="@+id/editTextProdName"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:hint="@string/prod_name_optional" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dataLayout"
+        android:id="@+id/tableValues"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:stretchColumns="*"
+        android:padding="5dp">
+
+        <TableRow
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="24dp"
+            android:padding="5dp">
+
+        <TextView
+            android:text="@string/ind_value"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textIndValueTitle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="@string/tot_value"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textTotalValueTitle"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textStyle="normal|bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="24dp"
+            android:padding="5dp">
+
+            <TextView
+                android:text="@string/number"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/textIndValueData"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textStyle="normal|bold"
+                android:textSize="16sp"
+                android:padding="5dp"/>
+
+            <TextView
+                android:text="@string/number"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/textTotalValueData"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textStyle="normal|bold"
+                android:textSize="16sp"
+                android:padding="5dp"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:text="@string/list_action_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableValues"
+        android:layout_alignParentStart="true"
+        android:id="@+id/txActionValue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/actions"
+        android:layout_below="@+id/txActionValue"
+        android:layout_alignParentStart="true">
+        <Button
+            android:text="@string/bt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAdd"
+            android:onClick="addNewProduct"
+            android:textAlignment="center" />
+
+        <Button
+            android:text="@string/bt_rem_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonRemSpecific"
+            android:onClick="remLastProd"
+            android:textAlignment="center" />
+
+
+        <Button
+            android:text="@string/bt_clean_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCleanList"
+            android:onClick="cleanList"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/list_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actions"
+        android:layout_alignParentStart="true"
+        android:id="@+id/txList"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:padding="5dp" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@+id/txList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/llProdList">
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

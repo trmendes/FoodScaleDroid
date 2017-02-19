@@ -2,6 +2,7 @@ package tmendes.com.analyticalbalancedroid;
 
 import android.content.Context;
 
+@SuppressWarnings("ALL")
 public class Product {
     private String name = "";
     private float weight;
@@ -72,7 +73,7 @@ public class Product {
 
         sb.append(ctx.getResources().getString(R.string.prod_to_pay_list));
         sb.append(" ");
-        sb.append(this.getInd_price());
+        sb.append(String.format("%.02f", this.getInd_price()));
 
         return sb.toString();
     }

@@ -1,8 +1,8 @@
 package tmendes.com.analyticalbalancedroid;
 
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
         prodList = new ArrayList<>();
 
-        price = Float.valueOf(0);
-        weight = Float.valueOf(0);
+        price = 0f;
+        weight = 0f;
 
         prodKgPrice = (EditText) findViewById(R.id.editTextKgPrice);
         prodName = (EditText) findViewById(R.id.editTextProdName);
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Float doTheMath() {
-        Float res = Float.valueOf(0);
+        Float res = 0f;
         if ((price > 0) && (weight > 0)) {
             res = price * weight;
         }

@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 updateValues();
                 prodKgPrice.removeTextChangedListener(kgTw);
-                prodIndValue.setText(String.valueOf(doTheMath()));
+                prodIndValue.setText(String.format("%.02f", doTheMath()));
                 prodKgPrice.addTextChangedListener(kgTw);
             }
         };
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 updateValues();
                 prodWeight.removeTextChangedListener(wgTw);
-                prodIndValue.setText(String.valueOf(doTheMath()));
+                prodIndValue.setText(String.format("%.02f", doTheMath()));
                 prodWeight.addTextChangedListener(wgTw);
             }
         };
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
             total = Float.valueOf(totalValue.getText().toString()) + valueToAdd;
 
-            totalValue.setText(String.valueOf(total));
+            totalValue.setText(String.format("%.02f", total));
 
             updateProductView();
         }
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         if (lastProdPos >= 0) {
             Product removedProd = prodList.remove(lastProdPos);
             float total = Float.valueOf(totalValue.getText().toString()) - removedProd.getInd_price();
-            totalValue.setText(String.valueOf(total));
+            totalValue.setText(String.format("%.02f", total));
             updateProductView();
         }
     }
@@ -162,12 +162,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateValues() {
         if (prodKgPrice.getText() != null) {
-            if (prodKgPrice.length() > 0 ) {
+            if ((prodKgPrice.length() > 0 ) && (prodKgPrice.getText().toString().charAt(0) != '.')) {
                 price = Float.valueOf(prodKgPrice.getText().toString());
             }
         }
         if (prodWeight.getText() != null) {
-            if (prodWeight.length() > 0 ) {
+            if ((prodWeight.length()) > 0 && (prodWeight.getText().toString().charAt(0) != '.')) {
                 weight = Float.valueOf(prodWeight.getText().toString());
             }
         }
@@ -178,7 +178,6 @@ public class MainActivity extends AppCompatActivity {
         if ((price > 0) && (weight > 0)) {
             res = price * weight;
         }
-        res = Float.valueOf(Math.round(res));
         return res;
     }
 }

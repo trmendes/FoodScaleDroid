@@ -13,7 +13,7 @@ public class Product {
         this.name = name;
         this.weight = weight;
         this.kg_price = kg_price;
-        this.ind_price = Math.round(this.kg_price * this.weight);
+        this.ind_price = this.kg_price * this.weight;
         this.ctx = ctx;
     }
 

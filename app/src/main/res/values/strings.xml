@@ -10,8 +10,6 @@
     <string name="prod_name">Product Name</string>
     <string name="prod_name_optional">Optional</string>
     <string name="number" translatable="false">0.00</string>
-    <string name="list_action_title">List Actions</string>
-    <string name="list_info">Product List</string>
     <string name="prod_name_list">[Product]</string>
     <string name="prod_price_kg_list">[Price/kg]</string>
 

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Food Scale Droid</string>
+    <string name="price_kg">Prix/kg</string>
+    <string name="weight">Poids (kg)</string>
+    <string name="bt_add">Ajouter</string>
+    <string name="bt_clean_list">Vider</string>
+    <string name="bt_rem_last">Supprimer dernier</string>
+    <string name="ind_value">Valeur Individuelle</string>
+    <string name="tot_value">Valeur Totale</string>
+    <string name="prod_name">Product Name</string>
+    <string name="prod_name_optional">Optionnel</string>
+    <string name="number" translatable="false">0.00</string>
+    <string name="prod_name_list">[Produit]</string>
+    <string name="prod_price_kg_list">[Prix/kg]</string>
+
+    <string name="prod_weight_list">[Poids]</string>
+    <string name="prod_to_pay_list">[Prix]</string>
+</resources>

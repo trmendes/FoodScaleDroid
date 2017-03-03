@@ -11,7 +11,10 @@ FoodScaleDroid is an Android application to help you to keep track with all the 
 
 #### Links
 
-[![The FoodScaleDroid App for Android on PlayStore](https://developer.android.com/images/brand/en_app_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=tmendes.com.analyticalbalancedroid)
+<a href="https://f-droid.org/repository/browse/?fdid=tmendes.com.analyticalbalancedroid" target="_blank">
+<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="90"/></a>
+<a href="https://play.google.com/store/apps/details?id=tmendes.com.analyticalbalancedroid" target="_blank">
+<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="90"/></a>
 
 #### Contact
 

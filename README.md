@@ -9,6 +9,11 @@ FoodScaleDroid is an Android application to help you to keep track with all the 
   * Calc the final price based on the kg price and the weight you are taking home
   * Keep a list of the products you are putting on your bag
 
+#### Screenshots
+
+<img src="assets/images/main_1.png" width="30%">
+<img src="assets/images/main_2.png" width="30%">
+
 #### Links
 
 <a href="https://f-droid.org/repository/browse/?fdid=tmendes.com.analyticalbalancedroid" target="_blank">
@@ -21,6 +26,8 @@ FoodScaleDroid is an Android application to help you to keep track with all the 
 For any question, bug report, suggestion please drop us a line
 
 #### Translate
+
+Send us a message
 
 #### The FoodScaleDroid Project Team
 
